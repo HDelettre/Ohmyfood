@@ -1,0 +1,12 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+}
+
+header {
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 15px;
+}
