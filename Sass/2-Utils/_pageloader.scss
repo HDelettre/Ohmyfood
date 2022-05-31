@@ -1,0 +1,36 @@
+.pageloader {
+    height: 50px;
+    width: 50px;
+    border: 8px solid white;
+    border-top: 8px solid $couleur_primaire;
+    border-bottom: 8px solid $couleur_secondaire;
+    border-radius: 50%;
+    color: $couleur_tertiaire;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top:0;right: 0;left: 0;bottom: 0;
+    z-index: 9999;
+    animation: loader 1500ms 3, finloader 50ms 4500ms forwards;
+}
+.pageloader i {
+    animation: loader 1500ms 3 reverse, finloader 50ms 4500ms forwards;
+}
+@keyframes loader {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+@keyframes finloader {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

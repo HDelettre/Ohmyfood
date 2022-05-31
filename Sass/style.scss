@@ -1,4 +1,11 @@
 @import "./2-Utils/_Variables_Couleurs";
 @import "./2-Utils/Variables_texte";
+@import "./2-Utils/mixins";
+@import "./2-Utils/pageloader";
 
 @import "./1-Base/_Typographie";
+
+@import "./3-Layout/header";
+@import "./3-Layout/footer";
+
+@import "./5-Pages/index";

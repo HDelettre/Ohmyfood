@@ -1,0 +1,15 @@
+@mixin bouton {
+    background-color: $couleur_primaire;
+    @if (lightness($couleur_primaire)<25%) {
+        color: black;
+        }
+    @else {
+        color:white;
+    }
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    height: 50px;
+    margin-bottom: 10px;
+    cursor: url("fa-regular fa-hand-pointer"), pointer;
+}

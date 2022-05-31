@@ -1,0 +1,23 @@
+footer {
+    color: $couleur_texte_footer;
+    background-color: darken($couleur_background, 70%);
+    text-align: left;
+    width: 100%;
+    ul {
+        padding-left: 20px;
+    }
+    li {
+        line-height: 2;
+        list-style: none;
+        .fa-solid {
+            padding: 0;
+        }
+    }
+    h2 {
+        font-family: 'Shrikhand',sans-serif;
+        margin-left: 20px;
+        padding-top: 12px;
+        font-size: 18px;
+    }
+    
+}
