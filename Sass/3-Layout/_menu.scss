@@ -1,0 +1,109 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    top:-20px;
+    background-color:$couleur_background;
+    z-index: 1;
+    text-align: left;
+    padding: 5px 15px 20px 15px;
+    h1 {
+        font-family: 'Shrikhand',sans-serif;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    &_titre {
+        margin-top: 8px;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        align-items: baseline;
+        &--nom {
+            width: 80%;
+            height: auto;
+        }
+        &--note {
+            width: 19%;
+            height: auto;
+            font-size: 25px;
+        }
+    }
+    &_type {
+        position: relative;
+        margin: 8px;
+        width: 90%;
+        &::before {
+            content: '';
+            background-color: $couleur_tertiaire;
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 40px;
+            height: 3px;
+        }
+        h2 {
+            margin: 0;
+            font-weight: 100;
+            font-size: 16px;
+        }
+    }
+    &_plats {
+        width: 90%;
+        height: 50px;
+        margin: 35px auto 5px auto;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        box-sizing: border-box;
+        text-align: left;
+        border-radius: 18px;
+        background-color: white;
+        opacity:0;
+        animation: menu_loader 2000ms 3s both;
+        &:hover .menu_plats--nom {
+            min-width: 63%;
+        }
+        &:hover i {
+            animation: rot_icon 1500ms;
+        }
+        &--nom {
+            min-width: 80%;
+            transition: all 1500ms;
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin-left: 10px;
+                line-height: 1.5;
+                &::first-line {
+                    font-weight: bold;
+                }
+            }
+        }
+        &--prix {
+            min-width: 20%;
+            text-align: center;
+            margin-left: 12px;
+            padding-top: 18px;
+        }
+        &--commande {
+            min-width: 13%;
+            height: 50px;
+            background-color: #99E2D0;
+            color: white;
+            text-align: center;
+            border-radius: 0 18px 18px 0;
+            line-height: 50px;
+            font-size: 20px;
+        }
+    }
+    a {
+        margin: 0 auto;
+    }
+    &_bouton {
+        @include bouton;
+    }
+}

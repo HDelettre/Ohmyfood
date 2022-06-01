@@ -2,10 +2,13 @@
 @import "./2-Utils/Variables_texte";
 @import "./2-Utils/mixins";
 @import "./2-Utils/pageloader";
+@import "./2-Utils/keyframes";
 
 @import "./1-Base/_Typographie";
 
 @import "./3-Layout/header";
 @import "./3-Layout/footer";
+@import "./3-Layout/menu";
 
 @import "./5-Pages/index";
+@import "./5-Pages/palette.scss";

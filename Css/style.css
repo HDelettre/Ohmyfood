@@ -11,7 +11,7 @@
   text-align: center;
   margin: auto;
   position: absolute;
-  top: 0;
+  top: -300px;
   right: 0;
   left: 0;
   bottom: 0;
@@ -62,6 +62,54 @@
   }
   to {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes rot_icon {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rot_icon {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes menu_loader {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    margin-top: 35px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 15px;
+  }
+}
+
+@keyframes menu_loader {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    margin-top: 35px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 15px;
   }
 }
 
@@ -124,6 +172,8 @@ header a {
 footer {
   color: white;
   background-color: #444444;
+  -webkit-box-shadow: 6px 6px 0px #909090;
+          box-shadow: 6px 6px 0px #909090;
   text-align: left;
   width: 100%;
 }
@@ -146,6 +196,160 @@ footer h2 {
   margin-left: 20px;
   padding-top: 12px;
   font-size: 18px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: -20px;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  top: -20px;
+  background-color: #F6F6F6;
+  z-index: 1;
+  text-align: left;
+  padding: 5px 15px 20px 15px;
+}
+
+.menu h1 {
+  font-family: 'Shrikhand',sans-serif;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.menu_titre {
+  margin-top: 8px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.menu_titre--nom {
+  width: 80%;
+  height: auto;
+}
+
+.menu_titre--note {
+  width: 19%;
+  height: auto;
+  font-size: 25px;
+}
+
+.menu_type {
+  position: relative;
+  margin: 8px;
+  width: 90%;
+}
+
+.menu_type::before {
+  content: '';
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+}
+
+.menu_type h2 {
+  margin: 0;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.menu_plats {
+  width: 90%;
+  height: 50px;
+  margin: 35px auto 5px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+  border-radius: 18px;
+  background-color: white;
+  opacity: 0;
+  -webkit-animation: menu_loader 2000ms 3s both;
+          animation: menu_loader 2000ms 3s both;
+}
+
+.menu_plats:hover .menu_plats--nom {
+  min-width: 63%;
+}
+
+.menu_plats:hover i {
+  -webkit-animation: rot_icon 1500ms;
+          animation: rot_icon 1500ms;
+}
+
+.menu_plats--nom {
+  min-width: 80%;
+  -webkit-transition: all 1500ms;
+  transition: all 1500ms;
+}
+
+.menu_plats--nom p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: 10px;
+  line-height: 1.5;
+}
+
+.menu_plats--nom p::first-line {
+  font-weight: bold;
+}
+
+.menu_plats--prix {
+  min-width: 20%;
+  text-align: center;
+  margin-left: 12px;
+  padding-top: 18px;
+}
+
+.menu_plats--commande {
+  min-width: 13%;
+  height: 50px;
+  background-color: #99E2D0;
+  color: white;
+  text-align: center;
+  border-radius: 0 18px 18px 0;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.menu a {
+  margin: 0 auto;
+}
+
+.menu_bouton {
+  background-color: #9356DC;
+  color: white;
+  padding: 0 15px;
+  border: none;
+  border-radius: 25px;
+  height: 40px;
+  margin: 10px 0;
+  line-height: 40px;
+  cursor: pointer;
 }
 
 .present {
@@ -178,12 +382,17 @@ footer h2 {
 .present_bouton {
   background-color: #9356DC;
   color: white;
-  padding: 15px;
+  padding: 0 15px;
   border: none;
   border-radius: 25px;
-  height: 50px;
-  margin-bottom: 10px;
-  cursor: url("fa-regular fa-hand-pointer"), pointer;
+  height: 40px;
+  margin: 10px 0;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.present h2 {
+  text-align: center;
 }
 
 .fonction {

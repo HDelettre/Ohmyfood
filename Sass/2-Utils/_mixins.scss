@@ -6,10 +6,11 @@
     @else {
         color:white;
     }
-    padding: 15px;
+    padding: 0 15px;
     border: none;
     border-radius: 25px;
-    height: 50px;
-    margin-bottom: 10px;
-    cursor: url("fa-regular fa-hand-pointer"), pointer;
+    height: 40px;
+    margin: 10px 0;
+    line-height: 40px;
+    cursor: pointer;
 }

@@ -1,6 +1,7 @@
 footer {
     color: $couleur_texte_footer;
     background-color: darken($couleur_background, 70%);
+    box-shadow: 6px 6px 0px darken($couleur_background, 40%);
     text-align: left;
     width: 100%;
     ul {

@@ -11,7 +11,7 @@
     text-align: center;
     margin: auto;
     position: absolute;
-    top:0;right: 0;left: 0;bottom: 0;
+    top:-300px;right: 0;left: 0;bottom: 0;
     z-index: 9999;
     animation: loader 1500ms 3, finloader 50ms 4500ms forwards;
 }

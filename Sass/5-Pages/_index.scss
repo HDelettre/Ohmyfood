@@ -18,6 +18,9 @@
     &_bouton {
         @include bouton;
     }
+    h2 {
+        text-align: center;
+    }
 }
 .fonction {
     margin: auto;

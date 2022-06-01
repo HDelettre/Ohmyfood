@@ -1,0 +1,20 @@
+@keyframes rot_icon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes menu_loader {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        margin-top: 35px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 15px;
+    }
+}
