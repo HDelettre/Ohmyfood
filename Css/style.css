@@ -25,6 +25,18 @@
           animation: loader 1500ms 3 reverse, finloader 50ms 4500ms forwards;
 }
 
+.pl {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  background-color: #F6F6F6;
+  opacity: 0;
+  animation: finloader 4000ms reverse both;
+}
+
 @-webkit-keyframes loader {
   from {
     -webkit-transform: rotate(0deg);
@@ -135,6 +147,10 @@ h2 {
   margin-left: 20px;
 }
 
+body {
+  background-color: white;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,6 +165,7 @@ header {
           align-items: center;
   width: 100%;
   height: auto;
+  background-color: white;
 }
 
 header a {
@@ -195,7 +212,13 @@ footer h2 {
   font-family: 'Shrikhand',sans-serif;
   margin-left: 20px;
   padding-top: 12px;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
 }
 
 .menu {
@@ -265,9 +288,10 @@ footer h2 {
 }
 
 .menu_type h2 {
-  margin: 0;
+  margin: auto;
+  margin-top: 15px;
   font-weight: 100;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .menu_plats {
@@ -349,7 +373,13 @@ footer h2 {
   height: 40px;
   margin: 10px 0;
   line-height: 40px;
+  -webkit-transition: background-color 20ms;
+  transition: background-color 20ms;
   cursor: pointer;
+}
+
+.menu_bouton:hover {
+  background-color: #ae80e5;
 }
 
 .present {
@@ -388,7 +418,13 @@ footer h2 {
   height: 40px;
   margin: 10px 0;
   line-height: 40px;
+  -webkit-transition: background-color 20ms;
+  transition: background-color 20ms;
   cursor: pointer;
+}
+
+.present_bouton:hover {
+  background-color: #ae80e5;
 }
 
 .present h2 {
@@ -396,13 +432,12 @@ footer h2 {
 }
 
 .fonction {
-  margin: auto;
   font-weight: 800;
+  background-color: white;
 }
 
 .fonction h2 {
-  text-align: left;
-  margin-left: 20px;
+  padding-top: 25px;
 }
 
 .fonction h3 {

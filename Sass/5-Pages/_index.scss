@@ -23,11 +23,10 @@
     }
 }
 .fonction {
-    margin: auto;
     font-weight: 800;
+    background-color: white;
     h2 {
-        text-align: left;
-        margin-left: 20px;
+        padding-top: 25px;
     }
     h3 {
         padding: 3px;
@@ -35,7 +34,7 @@
         width: 15px;
         line-height: 15px;
         background-color: $couleur_primaire;
-        color: white;
+        color: $couleur_texte_bouton;
         border-radius: 50%;
         font-size: 11px;
         margin-left: 20px;

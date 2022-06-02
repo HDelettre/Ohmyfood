@@ -1,16 +1,15 @@
 @mixin bouton {
     background-color: $couleur_primaire;
-    @if (lightness($couleur_primaire)<25%) {
-        color: black;
-        }
-    @else {
-        color:white;
-    }
+    color: $couleur_texte_bouton;
     padding: 0 15px;
     border: none;
     border-radius: 25px;
     height: 40px;
     margin: 10px 0;
     line-height: 40px;
+    transition: background-color 20ms;
     cursor: pointer;
+    &:hover {
+        background-color: lighten($couleur_primaire, 10%);
+    }
 }

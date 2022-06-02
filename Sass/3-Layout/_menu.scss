@@ -45,9 +45,10 @@
             height: 3px;
         }
         h2 {
-            margin: 0;
+            margin: auto;
+            margin-top: 15px;
             font-weight: 100;
-            font-size: 16px;
+            font-size: $txt_haut_std;
         }
     }
     &_plats {
@@ -97,7 +98,7 @@
             text-align: center;
             border-radius: 0 18px 18px 0;
             line-height: 50px;
-            font-size: 20px;
+            font-size: $icone_haut;
         }
     }
     a {

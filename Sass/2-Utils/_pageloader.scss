@@ -18,6 +18,16 @@
 .pageloader i {
     animation: loader 1500ms 3 reverse, finloader 50ms 4500ms forwards;
 }
+.pl {
+    width: 100%;
+}
+.container  {
+    width: 100%;
+    height: auto;
+    background-color: $couleur_background;
+    opacity: 0;
+    animation: finloader 4000ms reverse both;
+}
 @keyframes loader {
     from {
         transform: rotate(0deg);
