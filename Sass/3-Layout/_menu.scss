@@ -1,4 +1,5 @@
 .menu {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +10,7 @@
     background-color:$couleur_background;
     z-index: 1;
     text-align: left;
-    padding: 5px 15px 20px 15px;
+    padding: 5px 0 20px 0;
     h1 {
         font-family: 'Shrikhand',sans-serif;
         margin-top: 8px;
@@ -64,6 +65,7 @@
         background-color: white;
         opacity:0;
         animation: menu_loader 2000ms 3s both;
+        cursor: pointer;
         &:hover .menu_plats--nom {
             min-width: 63%;
         }
@@ -106,5 +108,8 @@
     }
     &_bouton {
         @include bouton;
+    }
+    &_cde {
+        margin-top: 10px;
     }
 }

@@ -7,9 +7,11 @@
     height: 40px;
     margin: 10px 0;
     line-height: 40px;
+    box-shadow: 3px 3px darken($couleur_primaire,20%);
     transition: background-color 20ms;
     cursor: pointer;
     &:hover {
         background-color: lighten($couleur_primaire, 10%);
+        box-shadow: 3px 6px darken($couleur_primaire,20%);
     }
 }

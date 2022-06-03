@@ -31,6 +31,16 @@
 
 .container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: auto;
   background-color: #F6F6F6;
   opacity: 0;
@@ -125,6 +135,48 @@
   }
 }
 
+@-webkit-keyframes icon_change {
+  from {
+    color: black;
+    .fa-regular {
+      display: inline;
+    }
+    .fa-solid {
+      display: none;
+    }
+  }
+  to {
+    color: #9356DC;
+    .fa-regular {
+      display: none;
+    }
+    .fa-solid {
+      display: inline;
+    }
+  }
+}
+
+@keyframes icon_change {
+  from {
+    color: black;
+    .fa-regular {
+      display: inline;
+    }
+    .fa-solid {
+      display: none;
+    }
+  }
+  to {
+    color: #9356DC;
+    .fa-regular {
+      display: none;
+    }
+    .fa-solid {
+      display: inline;
+    }
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: black;
@@ -142,13 +194,10 @@ header a {
   font-size: 25px;
 }
 
-h2 {
-  text-align: left;
-  margin-left: 20px;
-}
-
 body {
-  background-color: white;
+  background-color: #F6F6F6;
+  max-width: 600px;
+  margin: auto;
 }
 
 header {
@@ -222,6 +271,7 @@ footer a {
 }
 
 .menu {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,7 +289,7 @@ footer a {
   background-color: #F6F6F6;
   z-index: 1;
   text-align: left;
-  padding: 5px 15px 20px 15px;
+  padding: 5px 0 20px 0;
 }
 
 .menu h1 {
@@ -313,6 +363,7 @@ footer a {
   opacity: 0;
   -webkit-animation: menu_loader 2000ms 3s both;
           animation: menu_loader 2000ms 3s both;
+  cursor: pointer;
 }
 
 .menu_plats:hover .menu_plats--nom {
@@ -373,6 +424,8 @@ footer a {
   height: 40px;
   margin: 10px 0;
   line-height: 40px;
+  -webkit-box-shadow: 3px 3px #6023a9;
+          box-shadow: 3px 3px #6023a9;
   -webkit-transition: background-color 20ms;
   transition: background-color 20ms;
   cursor: pointer;
@@ -380,6 +433,12 @@ footer a {
 
 .menu_bouton:hover {
   background-color: #ae80e5;
+  -webkit-box-shadow: 3px 6px #6023a9;
+          box-shadow: 3px 6px #6023a9;
+}
+
+.menu_cde {
+  margin-top: 10px;
 }
 
 .present {
@@ -409,6 +468,10 @@ footer a {
   margin: auto;
 }
 
+.present_lien {
+  margin-bottom: 15px;
+}
+
 .present_bouton {
   background-color: #9356DC;
   color: white;
@@ -418,6 +481,8 @@ footer a {
   height: 40px;
   margin: 10px 0;
   line-height: 40px;
+  -webkit-box-shadow: 3px 3px #6023a9;
+          box-shadow: 3px 3px #6023a9;
   -webkit-transition: background-color 20ms;
   transition: background-color 20ms;
   cursor: pointer;
@@ -425,6 +490,8 @@ footer a {
 
 .present_bouton:hover {
   background-color: #ae80e5;
+  -webkit-box-shadow: 3px 6px #6023a9;
+          box-shadow: 3px 6px #6023a9;
 }
 
 .present h2 {
@@ -432,12 +499,16 @@ footer a {
 }
 
 .fonction {
+  width: 100%;
   font-weight: 800;
   background-color: white;
+  padding-bottom: 30px;
 }
 
 .fonction h2 {
   padding-top: 25px;
+  margin-left: 20px;
+  text-align: left;
 }
 
 .fonction h3 {
@@ -502,7 +573,7 @@ footer a {
 }
 
 .restaurants h2 {
-  margin-left: 20px;
+  margin-left: 10px;
   text-align: left;
 }
 
@@ -525,7 +596,7 @@ footer a {
   background-color: white;
   border-radius: 15px;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   z-index: 0;
 }
 
@@ -561,27 +632,33 @@ footer a {
 
 .restaurants_card--icone {
   font-size: 25px;
-  width: 19%;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
+}
+
+.restaurants_card--icone i {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
 }
 
 .restaurants_card--icone .fa-regular {
-  display: inline;
+  opacity: 1;
 }
 
 .restaurants_card--icone .fa-solid {
-  display: none;
-}
-
-.restaurants_card--icone:hover, .restaurants_card--icone:active {
+  opacity: 0;
   color: #9356DC;
 }
 
-.restaurants_card--icone:hover .fa-regular, .restaurants_card--icone:active .fa-regular {
-  display: none;
+.restaurants_card--icone:hover .fa-regular {
+  opacity: 0;
 }
 
-.restaurants_card--icone:hover .fa-solid, .restaurants_card--icone:active .fa-solid {
-  display: inline;
+.restaurants_card--icone:hover .fa-solid {
+  opacity: 1;
 }
 
 .restaurants_new {
@@ -594,3 +671,5 @@ footer a {
   z-index: 1;
   font-weight: 900;
 }
+
+/*@import "./5-Pages/palette.scss";*/

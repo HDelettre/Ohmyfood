@@ -18,3 +18,15 @@
         margin-top: 15px;
     }
 }
+@keyframes icon_change {
+    from {
+        color: black;
+        .fa-regular {display: inline;}
+        .fa-solid {display: none;}
+    }
+    to {
+        color: $couleur-primaire;
+        .fa-regular {display: none;}
+        .fa-solid {display: inline;}
+    }
+}
