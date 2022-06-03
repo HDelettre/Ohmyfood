@@ -15,3 +15,8 @@
         box-shadow: 3px 6px darken($couleur_primaire,20%);
     }
 }
+@mixin no-mobile {
+    @media screen and (min-width: map-get($breakpoints,mobile)) {
+        @content;
+    }
+}

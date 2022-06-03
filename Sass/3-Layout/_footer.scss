@@ -4,8 +4,20 @@ footer {
     box-shadow: 6px 6px 0px darken($couleur_background, 40%);
     text-align: left;
     width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    @include no-mobile {
+        flex-flow: row nowrap;
+        justify-content: center;
+    }
     ul {
         padding-left: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        @include no-mobile {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
     }
     li {
         line-height: 2;

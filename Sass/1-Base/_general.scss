@@ -2,4 +2,7 @@ body {
     background-color: $couleur_background;
     max-width: 600px;
     margin: auto;
+    @include no-mobile {
+        max-width: 1500px;
+    }
 }
