@@ -138,48 +138,6 @@
   }
 }
 
-@-webkit-keyframes icon_change {
-  from {
-    color: black;
-    .fa-regular {
-      display: inline;
-    }
-    .fa-solid {
-      display: none;
-    }
-  }
-  to {
-    color: #9356DC;
-    .fa-regular {
-      display: none;
-    }
-    .fa-solid {
-      display: inline;
-    }
-  }
-}
-
-@keyframes icon_change {
-  from {
-    color: black;
-    .fa-regular {
-      display: inline;
-    }
-    .fa-solid {
-      display: none;
-    }
-  }
-  to {
-    color: #9356DC;
-    .fa-regular {
-      display: none;
-    }
-    .fa-solid {
-      display: inline;
-    }
-  }
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   color: black;
@@ -292,6 +250,7 @@ footer ul {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    width: 60%;
   }
 }
 
@@ -642,13 +601,14 @@ footer a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 90%;
   }
 }
 
 .restaurants h2 {
   margin-left: 10px;
   text-align: left;
-  width: 100%;
+  width: 95%;
 }
 
 .restaurants a {
