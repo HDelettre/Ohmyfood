@@ -6,9 +6,12 @@ footer {
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
+    position: relative;
+    top:-20px;
     @include no-mobile {
         flex-flow: row nowrap;
         justify-content: center;
+        top:0;
     }
     ul {
         padding-left: 20px;

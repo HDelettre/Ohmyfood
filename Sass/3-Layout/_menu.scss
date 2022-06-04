@@ -11,6 +11,11 @@
     z-index: 1;
     text-align: left;
     padding: 5px 0 20px 0;
+    @include no-mobile {
+        width: 59%;
+        top:0;
+        padding-top: 20px;
+    }
     h1 {
         font-family: 'Shrikhand',sans-serif;
         margin-top: 8px;
@@ -54,6 +59,7 @@
     }
     &_plats {
         width: 90%;
+        max-width: 400px;
         height: 50px;
         margin: 35px auto 5px auto;
         display: flex;
@@ -93,7 +99,7 @@
             padding-top: 18px;
         }
         &--commande {
-            min-width: 13%;
+            min-width: 15%;
             height: 50px;
             background-color: #99E2D0;
             color: white;

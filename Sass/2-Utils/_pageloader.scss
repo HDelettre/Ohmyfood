@@ -30,6 +30,7 @@
     background-color: $couleur_background;
     opacity: 0;
     animation: finloader 4000ms reverse both;
+    margin-bottom: 20px;
 }
 @keyframes loader {
     from {

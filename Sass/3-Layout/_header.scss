@@ -6,6 +6,9 @@ header {
     width: 100%;
     height: auto;
     background-color: white;
+    @include no-mobile {
+        width: 30%;
+    }
     a {
         position: absolute;
         left: 20px;
@@ -20,6 +23,8 @@ header {
         overflow: hidden;
         img {
             width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
         }
     }
 }
