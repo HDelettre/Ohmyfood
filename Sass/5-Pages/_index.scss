@@ -1,6 +1,6 @@
 .present {
     background-color: $couleur_background;
-
+    width: 100%;
     &_loc {
         background-color: darken($couleur_background,5%);
         display: flex;
@@ -31,6 +31,9 @@
     font-weight: 800;
     background-color: white;
     padding-bottom: 30px;
+    @include no-mobile {
+        border-radius: 20px;
+    }
     h2 {
         padding-top: 25px;
         margin-left: 20px;
