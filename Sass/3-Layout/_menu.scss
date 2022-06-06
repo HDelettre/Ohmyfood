@@ -36,6 +36,28 @@
             width: 19%;
             height: auto;
             font-size: 25px;
+            position: relative;
+            i {
+                position: absolute;
+                top:-20px;
+                right: 25px;
+                transition: all 1000ms;
+            }
+            .fa-solid {
+                opacity: 0;
+                color: $couleur-primaire;
+            }
+            .fa-regular {
+                opacity: 1;
+            }
+            &:hover {
+                .fa-solid {
+                    opacity: 1;
+                }
+                .fa-regular {
+                    opacity: 0;
+                }
+            }
         }
     }
     &_type {

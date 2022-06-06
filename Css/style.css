@@ -366,6 +366,32 @@ footer a {
   width: 19%;
   height: auto;
   font-size: 25px;
+  position: relative;
+}
+
+.menu_titre--note i {
+  position: absolute;
+  top: -20px;
+  right: 25px;
+  -webkit-transition: all 1000ms;
+  transition: all 1000ms;
+}
+
+.menu_titre--note .fa-solid {
+  opacity: 0;
+  color: #9356DC;
+}
+
+.menu_titre--note .fa-regular {
+  opacity: 1;
+}
+
+.menu_titre--note:hover .fa-solid {
+  opacity: 1;
+}
+
+.menu_titre--note:hover .fa-regular {
+  opacity: 0;
 }
 
 .menu_type {
@@ -722,8 +748,6 @@ footer a {
 
 .restaurants_card--icone {
   font-size: 25px;
-  -webkit-transition: all 1000ms;
-  transition: all 1000ms;
 }
 
 .restaurants_card--icone i {
